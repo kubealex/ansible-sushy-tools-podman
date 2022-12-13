@@ -1,0 +1,5 @@
+---
+# defaults file for ansible-sushy-tools-podman
+sushy_port: 8000
+sushy_admin_user: admin
+sushy_admin_password: redhat
