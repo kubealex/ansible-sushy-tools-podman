@@ -13,6 +13,7 @@ Role Variables
 
 The role can be configured to have a predefined username and password for BMC credentials, as well as the port where it will be listening.
 
+    sushy_host: 0.0.0.0
     sushy_port: 8000
     sushy_admin_user: admin
     sushy_admin_password: redhat
