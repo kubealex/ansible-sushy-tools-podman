@@ -29,7 +29,7 @@
   community.general.htpasswd:
     path: ~/sushy-tools/htpasswd
     name: "{{ sushy_admin_user | default('admin', true) }}"
-    password: "{{ sushy_admin_password | default('redhat', true) }}"
+    password: "{{ sushy_admin_password | default('admin', true) }}"
     crypt_scheme: bcrypt
     mode: 0640
 
