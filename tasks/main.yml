@@ -16,14 +16,14 @@
 - name: BMC sushy-tools Setup | Create folder for sushy-tools config
   ansible.builtin.file:
     path: ~/sushy-tools
-    mode: 0755
+    mode: "0755"
     state: directory
 
 - name: BMC sushy-tools Setup | Fire sushy-tools configuration
   ansible.builtin.template:
     src: sushy-tools.conf.j2
     dest: ~/sushy-tools/sushy-emulator.conf
-    mode: 0755
+    mode: "0755"
 
 - name: BMC sushy-tools Setup | Add BMC user configuration
   community.general.htpasswd:
@@ -31,7 +31,7 @@
     name: "{{ sushy_admin_user | default('admin', true) }}"
     password: "{{ sushy_admin_password | default('admin', true) }}"
     crypt_scheme: bcrypt
-    mode: 0640
+    mode: "0640"
 
 - name: BMC sushy-tools Setup | Generate private key for SSL certificate
   community.crypto.openssl_privatekey:
